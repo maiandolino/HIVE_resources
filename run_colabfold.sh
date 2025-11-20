@@ -9,8 +9,10 @@
 #SBATCH --output=logs/colabfold_%A_%a.out
 #SBATCH --error=logs/colabfold_%A_%a.err
 
-INPUT_FASTA="$1"
-OUTPUT_DIR="$2"
+FASTA_ID="1FQG"
+
+INPUT_FASTA="/quobyte/jbsiegelgrp/marco/af2/1FQG.fasta"
+OUTPUT_DIR="/quobyte/jbsiegelgrp/marco/af2/${FASTA_ID}_output"
 
 if [ ! -f "$INPUT_FASTA" ]; then
     echo "Error: Input FASTA file '$INPUT_FASTA' does not exist"
